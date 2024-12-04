@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registro De Orden De Producción</title>
+<link href="registroestilos.css" rel="stylesheet" type="text/css">
+</head>
+<body class="ventana-orden">
+	<h2>Registro De Orden De Producción</h2>
+	<div class="botones">
+		<button>Modificar</button>
+		<button>Recargar</button>
+		<button>Guardar</button>
+		<button>Anular</button>
+		<button>Saldo</button>
+		<button>Peso F8</button>
+		<button>Ticket Caja</button>
+		<button>Ticket Pallet</button>
+		<button>Cerrar</button>
+	</div>
+	
+	<div>
+		<div class="datos-orden-produccion">
+			<div class="datosCliente">
+				<a href="#">Cliente</a>
+				<input type="text" name="codCliente" id="codCliente">
+				<input type="text" name="nombreCliente" id="nombreCliente">
+			</div>
+			<div class="datosProducto">
+				<a href="#">Producto</a>
+				<input type="text" name="codProducto" id="codProducto">
+				<input type="text" name="nombreProducto" id="nombreProducto">
+			</div>
+			<div>
+				<p>Orden de Producción</p>
+				<input type="text" name="ordenProduccion" id="numeroOrdenProduccion">
+			</div>
+			<div>
+				<p>Fecha de Fabricación</p>
+				<input type="date" name="fechaFabricacion" id="fechaFabricacion">
+			</div>
+			<div>
+				<p>Estado</p>
+				<input type="text" name="opAbierta" id="opAbierta">
+			</div>
+			
+			
+		</div>
+		<div class="datos-de-produccion">
+		
+		</div>
+	
+	</div>
+</body>
+</html>

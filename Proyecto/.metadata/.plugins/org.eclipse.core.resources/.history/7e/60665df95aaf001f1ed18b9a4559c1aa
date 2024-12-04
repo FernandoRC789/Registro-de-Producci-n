@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+body{
+	margin: 0px;
+	display: flex;             /* Habilita el uso de flexbox */
+	justify-content: center;   /* Centra horizontalmente */
+	align-items: center;       /* Centra verticalmente */
+	height: 100vh;             /* Asegúrate de que el contenedor tenga altura para centrar verticalmente */
+	background-color: black;
+}
+.Registro-sesion{
+	background-color: green;
+	text-align:center;
+	width: auto; /* O un valor fijo como 300px */
+	height: 500px;
+}
+img{
+	width: 350px;
+	margin: 10px;
+}

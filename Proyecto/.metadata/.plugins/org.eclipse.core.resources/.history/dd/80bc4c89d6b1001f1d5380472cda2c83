@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registro De Orden De Producción</title>
+<link href="registroestilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>BIENVENIDO AL PORTAL USUARIO DE REGISTROS DE ORDEN <br> en espera...</h1>
+	<div>
+	
+	
+	
+	</div>
+	
+	<div>
+	
+	
+	
+	</div>
+</body>
+</html>

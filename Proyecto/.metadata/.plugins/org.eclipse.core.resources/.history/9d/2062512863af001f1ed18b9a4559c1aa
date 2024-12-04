@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="Registro-sesion">
+		<img src="img/farmexlogo.png" alt="logo de farmex">
+		
+		<form action="" class="formulario">
+			<div>
+                <label for="turno">Turno</label>
+                <input type="text" id="turno" name="turno">
+            </div>
+            <div>
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+            <div>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña">
+            </div>
+			
+			<button id="btnAceptar">ACEPTAR</button>
+			<button id="btnCerrar">CERRAR</button>
+		</form>
+	</div>
+
+</body>
+</html>

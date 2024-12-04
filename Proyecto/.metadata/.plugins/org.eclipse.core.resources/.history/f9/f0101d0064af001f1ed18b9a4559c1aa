@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+
+body {
+    margin: 0;
+    display: flex;             /* Habilita el uso de flexbox */
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    height: 100vh;             /* Asegúrate de que el contenedor tenga altura para centrar verticalmente */
+    background-color: black;
+}
+
+.Registro-sesion {
+    background-color: #7ecb76;
+    text-align: center;
+    width: 350px;              /* Ancho fijo para el formulario */
+    height: auto;              /* Permite que la altura se ajuste según el contenido */
+    padding: 20px;             /* Espaciado dentro del contenedor */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+img {
+    width: 150px;              /* Ajusta el tamaño del logo */
+    margin-bottom: 20px;       /* Espacio debajo de la imagen */
+    border-radius: 10px;
+}
+
+.formulario {
+    padding: 0px 20px;
+    display: flex;             /* Uso de Flexbox para organizar los campos */
+    flex-direction: column;    /* Apila los elementos verticalmente */
+    gap: 15px;                 /* Espacio uniforme entre cada par de elementos */
+}
+
+.formulario div {
+    display: flex;             /* Cada par label-input en una fila */
+    align-items: center;       /* Alinea el texto del label con el input */
+    gap: 10px;                 /* Espacio entre el label y el input */
+}
+
+label {
+    text-align: left;
+    font-size: 14px;           /* Tamaño de fuente legible */
+    margin-bottom: 5px;        /* Espacio entre el label y el input */
+    width: 30%;                /* Ancho del label para que no ocupe todo el espacio */
+}
+
+input, select{
+    width: 70%;                /* Los inputs ocupan el resto del espacio */
+    padding: 8px;              /* Espaciado dentro del input */
+    font-size: 14px;           /* Tamaño de la fuente en el input */
+    border: 1px solid #ccc;    /* Borde gris claro */
+    border-radius: 4px;        /* Bordes redondeados */
+    box-sizing: border-box;    /* Incluye padding y border en el ancho total */
+}
+
+button {
+    width: 100%;               /* Hace que los botones ocupen todo el ancho */
+    padding: 10px;             /* Espaciado dentro de los botones */
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white;              /* Texto blanco */
+    border: none;
+    border-radius: 4px;        /* Bordes redondeados */
+    cursor: pointer;           /* Cambio de cursor al pasar por encima */
+    font-size: 16px;           /* Tamaño de la fuente */
+    margin-top: 10px;          /* Espacio entre los botones */
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro en hover */
+}

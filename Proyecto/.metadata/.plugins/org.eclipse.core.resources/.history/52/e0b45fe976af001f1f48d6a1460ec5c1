@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page import="java.io.*, java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <%
+        String usuario = request.getParameter("usuario");
+        String contraseña = request.getParameter("contraseña");
+
+        // Establecer la conexión con la base de datos
+        Connection con = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+
+        // Solo hacer la verificación si los parámetros de usuario y contraseña están presentes
+        if (usuario != null && contraseña != null) {
+            try {
+                // Cargar el driver JDBC
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+                // Conectar a la base de datos (ajusta la URL, usuario y contraseña)
+                String url = "jdbc:mysql://localhost:3306/BDT1_RODRIGUEZ?useSSL=false&serverTimezone=UTC";  // Ajusta la URL si es necesario
+                String dbUsuario = "root";  // Cambia el usuario si es necesario
+                String dbContraseña = "123456";  // Cambia la contraseña si es necesario
+
+                con = DriverManager.getConnection(url, dbUsuario, dbContraseña);
+
+                // Preparar la consulta SQL para verificar las credenciales
+                String sql = "SELECT * FROM USUARIOS WHERE NOM_USUARIO = ? AND CONTRASENA = ?";
+                statement = con.prepareStatement(sql);
+                statement.setString(1, usuario);
+                statement.setString(2, contraseña);
+                resultSet = statement.executeQuery();
+
+                // Verificar si el usuario y la contraseña son correctos
+                if (resultSet.next()) {
+                    // Si las credenciales son correctas, redirigir a otra página
+                    response.sendRedirect("registroDeOrden.jsp");
+                } else {
+                    // Si las credenciales son incorrectas, mostrar mensaje de error
+                    out.println("<h3>Usuario o contraseña incorrectos.</h3>");
+                }
+
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+                out.println("<h3>Error al conectar con la base de datos: " + e.getMessage() + "</h3>");
+            } finally {
+                try {
+                    if (resultSet != null) resultSet.close();
+                    if (statement != null) statement.close();
+                    if (con != null) con.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                    out.println("<h3>Error al cerrar recursos: " + e.getMessage() + "</h3>");
+                }
+            }
+        }
+    %>
+
+	<div class="Registro-sesion">
+		<img src="img/farmexlogo.png" alt="logo de farmex">
+		
+		<form action="logueo.js" method="post" class="formulario">
+			<div>
+                <label for="turno">TURNO:</label>
+				<select name="lenguajes" id="lang">
+			        <option value="primero">PRIMERO</option>
+			        <option value="segundo">SEGUNDO</option>
+			        <option value="tercero">TERCERO</option>
+			    </select>            
+			</div>
+            <div>
+                <label for="usuario">USUARIO:</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+            <div>
+                <label for="contraseña">CONTRASEÑA:</label>
+                <input type="password" id="contraseña" name="contraseña">
+            </div>
+			
+			<button id="btnAceptar">ACEPTAR</button>
+			<button id="btnCerrar">CERRAR</button>
+		</form>
+	</div>
+
+</body>
+</html>

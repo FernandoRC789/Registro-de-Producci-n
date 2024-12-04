@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registro De Orden De Producción</title>
+<link href="registroestilos.css" rel="stylesheet" type="text/css">
+</head>
+<body class="ventana-orden">
+	<h2>Registro De Orden De Producción</h2>
+	<div class="botones">
+		<button>Modificar</button>
+		<button>Recargar</button>
+		<button>Guardar</button>
+		<button>Anular</button>
+		<button>Saldo</button>
+		<button>Peso F8</button>
+		<button>Ticket Caja</button>
+		<button>Ticket Pallet</button>
+		<button>Cerrar</button>
+	</div>
+	
+	<div>
+	
+	
+	
+	</div>
+</body>
+</html>
