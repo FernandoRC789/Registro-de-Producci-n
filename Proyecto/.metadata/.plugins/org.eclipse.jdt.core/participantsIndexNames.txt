@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
 C:\Users\rodri\Documentos casa\NICK\ciclo 3\modulo 1\lenguaje de programacion 1\Proyecto\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3571640006.index
 \ProyectoAreaProduccion\src\main\java
+C:\Users\rodri\OneDrive\Documentos\GitHub\Registro-de-Producci-n\Proyecto\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3571640006.index
+\ProyectoAreaProduccion\src\main\java

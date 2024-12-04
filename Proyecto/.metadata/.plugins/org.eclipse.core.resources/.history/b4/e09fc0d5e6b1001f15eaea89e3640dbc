@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="menuOpciones.css" ref="stylesheet" type="text/css" >
+</head>
+<body>
+	<header>
+
+	    <nav>
+	        <!-- Menú de Configuración -->
+	        <div class="menu-item">
+	            <a href="#">Configuración</a>
+	        </div>
+	
+	        <!-- Menú de Registro con submenú -->
+	        <div class="menu-item">
+	            <a href="#">Registro</a>
+	            <div class="submenu submenu-right">
+	                <a href="#">Cliente</a>
+	                <a href="#">Productos</a>
+	                <a href="#">Órdenes</a>
+	            </div>
+	        </div>
+	
+	        <!-- Menú de Ventana -->
+	        <div class="menu-item">
+	            <a href="#">Ventana</a>
+	        </div>
+	
+	        <!-- Menú de Ayuda -->
+	        <div class="menu-item">
+	            <a href="#">Ayuda</a>
+	        </div>
+	    </nav>
+	</header>
+</body>
+</html>
+
